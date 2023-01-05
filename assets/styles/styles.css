@@ -8,7 +8,8 @@
 :root {
     --mainClr: #4D594D;
     --secondaryClr: #8AA08A;
-    --gray: #EBEBEB
+    --gray: #EBEBEB;
+    --darkgray: #191919;
 }
 
 html {
@@ -48,14 +49,46 @@ p {
 
 /* Header */
 header {
+    background: transparent;
     width: 100vw;
     display: grid;
+    grid-template-columns: auto auto auto;
     z-index: 50;
-    position: absolute;
+    position: fixed;
+    justify-content: end;
+    transition: 250ms ease-in;
+    -webkit-transition: 250ms ease-in;
+    -moz-transition: 250ms ease-in;
+    -ms-transition: 250ms ease-in;
+    -o-transition: 250ms ease-in;
+}
+
+header > a {
+    text-decoration: none;
+}
+.fullHeader {
+    justify-content: space-between;
+    align-items: center;
+    background: var(--darkgray);
+    padding: 0 8rem;
+    box-shadow: 0 3px 8px var(--darkgray);
+}
+
+.navLogo,
+.ctaBookBord {
+    display: none;
+}
+.showNavLogo,
+.showCtaBookBord {
+    display: block;
+}
+
+.showNavLogo {
+    width: 150px;
+    margin: 0.5rem 0;
 }
 
 nav {
-    justify-self: end;
     margin-right: 8rem;
 }
 nav > ul {
@@ -68,7 +101,7 @@ nav > ul > li {
 nav > ul > li > a {
     text-decoration: none; 
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 
@@ -157,6 +190,9 @@ nav > ul > li > a {
     color: var(--mainClr);
     background-color: transparent;
     border: 3px solid var(--mainClr);
+}
+.showCtaBookBord {
+    margin: 0;
 }
 
 .divider1 {
