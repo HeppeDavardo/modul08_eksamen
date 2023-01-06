@@ -6,7 +6,7 @@ const navLogo = document.querySelector(".navLogo");
 const ctaBookBord = document.querySelector(".ctaBookBord");
 
 const landingpageOptions =  {
-    rootMargin: "-150px 0px 0px 0px"
+    rootMargin: "-200px 0px 0px 0px"
 };
 
 const landingpageObserver = new IntersectionObserver(function(entries, landingpageObserver) {
