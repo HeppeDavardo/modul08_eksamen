@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,15 +6,15 @@
 }
 
 :root {
-    --mainClr: #4D594D;
-    --secondaryClr: #8AA08A;
-    --gray: #EBEBEB;
-    --darkgray: #191919;
+  --mainClr: #4d594d;
+  --secondaryClr: #8aa08a;
+  --gray: #ebebeb;
+  --darkgray: #191919;
 }
 
 html {
   font-size: 16px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   color: black;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -26,249 +26,358 @@ body {
 }
 
 h1 {
-    margin: 0;
+  margin: 0;
 }
 
 h2 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin: 1rem 0 0 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
 }
 
 p {
-    font-weight: 300;
-    margin-bottom: 0;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 .grayBG {
-    background-color: var(--gray);
+  background-color: var(--gray);
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 /* Header */
 header {
-    background: transparent;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    z-index: 50;
-    position: fixed;
-    justify-content: end;
-    transition: 250ms ease-in;
-    -webkit-transition: 250ms ease-in;
-    -moz-transition: 250ms ease-in;
-    -ms-transition: 250ms ease-in;
-    -o-transition: 250ms ease-in;
+  background: transparent;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  z-index: 50;
+  position: fixed;
+  justify-content: end;
+  transition: 250ms ease-in;
+  -webkit-transition: 250ms ease-in;
+  -moz-transition: 250ms ease-in;
+  -ms-transition: 250ms ease-in;
+  -o-transition: 250ms ease-in;
 }
 
 header > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .fullHeader {
-    justify-content: space-between;
-    align-items: center;
-    background: var(--darkgray);
-    padding: 0 8rem;
-    box-shadow: 0 1px 3px var(--darkgray);
+  justify-content: space-between;
+  align-items: center;
+  background: var(--darkgray);
+  padding: 0 8rem;
+  box-shadow: 0 1px 3px var(--darkgray);
 }
 
 .navLogo,
 .ctaBookBord {
-    display: none;
+  display: none;
 }
 .showNavLogo,
 .showCtaBookBord {
-    display: block;
+  display: block;
 }
 
 .showNavLogo {
-    width: 150px;
-    margin: 0.5rem 0;
+  width: 150px;
+  margin: 0.5rem 0;
 }
 
 nav {
-    margin-right: 8rem;
+  margin-right: 8rem;
 }
 nav > ul {
-    display: flex;
-    gap: 3rem;
+  display: flex;
+  gap: 3rem;
 }
 nav > ul > li {
-    list-style: none;
+  list-style: none;
 }
 nav > ul > li > a {
-    text-decoration: none; 
-    color: white;
-    font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
 }
-
 
 /* Main */
-.landingpage{
-    width: 100vw;
+.landingpage {
+  width: 100vw;
 }
 .background_lp {
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    z-index: -10;
-    
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: -10;
 }
 
 .background_lp > img {
-    height: 100vh;
+  height: 100vh;
 }
 
 .lp_img {
-    filter: brightness(60%);
-    -webkit-filter: brightness(60%);
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
 }
 
 .lp_txt {
-    margin-left: 12rem;
-    height: 100vh;
-    width: 32%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  margin-left: 12rem;
+  height: 100vh;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .lp_logo {
-    width: 80%;
+  width: 80%;
 }
 
 .lp_title {
-    font-size: 2rem;
-    margin-top: 2rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .btn1,
 .btn2 {
-    font-size: 1.2rem;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 600;
-    padding: 0.3rem 2rem;
-    cursor: pointer;
-    margin: 2rem 0;
-    transition: .1s ease-in;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-    -webkit-transition: .1s ease-in;
-    -moz-transition: .1s ease-in;
-    -ms-transition: .1s ease-in;
-    -o-transition: .1s ease-in;
+  font-size: 1.2rem;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+  margin: 2rem 0;
+  transition: 0.1s ease-in;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: 0.1s ease-in;
+  -moz-transition: 0.1s ease-in;
+  -ms-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
 }
 
 .btn1:hover,
 .btn2:hover {
-    transform: scale(97%);
-    -webkit-transform: scale(97%);
-    -moz-transform: scale(97%);
-    -ms-transform: scale(97%);
-    -o-transform: scale(97%);
+  transform: scale(97%);
+  -webkit-transform: scale(97%);
+  -moz-transform: scale(97%);
+  -ms-transform: scale(97%);
+  -o-transform: scale(97%);
 }
 
 .lp_buttons {
-    display: flex;
-    gap: 3rem;
+  display: flex;
+  gap: 3rem;
 }
 
 .btn1 {
-    color: white;
-    background-color: var(--mainClr);
-    border: none;
+  color: white;
+  background-color: var(--mainClr);
+  border: none;
 }
 .btn2 {
-    color: var(--mainClr);
-    background-color: transparent;
-    border: 3px solid var(--mainClr);
+  color: var(--mainClr);
+  background-color: transparent;
+  border: 3px solid var(--mainClr);
 }
 .showCtaBookBord {
-    margin: 0;
+  margin: 0;
 }
 
 .wave1 {
-    animation: wave ease-in-out 12s infinite;
-    -webkit-animation: wave ease-in-out 12s infinite;
+  animation: wave ease-in-out 12s infinite;
+  -webkit-animation: wave ease-in-out 12s infinite;
 }
 .wave2 {
-    animation: wave linear 15s infinite;
-    -webkit-animation: wave ease-in-out 15s infinite;
+  animation: wave linear 15s infinite;
+  -webkit-animation: wave ease-in-out 15s infinite;
 }
 .wave3 {
-    animation: wave linear 20s infinite;
-    -webkit-animation: wave ease-in-out 20s infinite;
+  animation: wave linear 20s infinite;
+  -webkit-animation: wave ease-in-out 20s infinite;
 }
 @keyframes wave {
-    0% {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-    50% {
-        transform: translateX(50%);
-        -webkit-transform: translateX(50%);
-        -moz-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        -o-transform: translateX(50%);
-    }
-    100% {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }
 
 .divider1 {
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    fill: #EBEBEB;
-    width: 200%;
-    height: 100px;
-    transform: rotate(180deg);
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  fill: #ebebeb;
+  width: 200%;
+  height: 100px;
+  transform: rotate(180deg);
 }
 
 .divider2 {
-    fill: white;
-    transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
+  fill: white;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
 }
 
 .ikonbanner {
-    display: flex;
-    justify-content: space-around;
-    padding: 3rem 8rem 8rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 8rem 8rem;
 }
 
 .ikonboks {
-    width: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .ikonboks > img {
-    width: 25%;
+  width: 25%;
 }
 
 .frokostBtn {
-    background-color: var(--secondaryClr);
+  background-color: var(--secondaryClr);
+}
+
+/* Carousel inspireret fra https://codepen.io/claudiulazar/pen/OdvVOo */
+.SoMeContainer {
+    position: relative;
+    padding-bottom: 8rem;
+}
+
+.SoMeTitle {
+    margin: 3rem 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.imgCarousel {
+  position: absolute;
+  width: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+  -webkit-animation: rotate360 60s infinite forwards linear;
+}
+.carouselImg {
+    
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: -20px;
+  background-size: cover;
+  display: flex;
+}
+
+.carouselImg:nth-child(1) {
+  background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carouselImg:nth-child(2) {
+  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carouselImg:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carouselImg:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carouselImg:nth-child(5) {
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carouselImg:nth-child(6) {
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(200deg) translateZ(430px);
+}
+.carouselImg:nth-child(7) {
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carouselImg:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carouselImg:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.SoMeIcons {
+    margin-top: 22rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 4rem;
+}
+.SoMeIcon {
+    width: 40px;
+    fill: var(--mainClr);
+    transition: 100ms ease-in;
+    -webkit-transition: 100ms ease-in;
+    -moz-transition: 100ms ease-in;
+    -ms-transition: 100ms ease-in;
+    -o-transition: 100ms ease-in;
+}
+.SoMeIcon:hover {
+    fill: var(--secondaryClr);
+    transform: scale(95%);
+    -webkit-transform: scale(95%);
+    -moz-transform: scale(95%);
+    -ms-transform: scale(95%);
+    -o-transform: scale(95%);
+}
+.Icon_awesome-instagram {
+    fill: white;
 }

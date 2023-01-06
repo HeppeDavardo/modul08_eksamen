@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lag_1" data-name="Lag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.65 78.17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #767676;
+      }
+    </style>
+  </defs>
+  <path id="Icon_awesome-facebook" data-name="Icon awesome-facebook" class="cls-1" d="m78.65,39.32C78.65,17.6,61.04,0,39.32,0,17.6,0,0,17.61,0,39.33c0,19.34,14.07,35.81,33.18,38.84v-27.48h-9.99v-11.37h9.99v-8.66c0-9.85,5.87-15.3,14.85-15.3,2.95.04,5.89.3,8.8.77v9.67h-4.96c-4.88,0-6.41,3.03-6.41,6.14v7.38h10.91l-1.74,11.37h-9.17v27.48c19.11-3.03,33.18-19.5,33.18-38.85Z"/>
+</svg>
