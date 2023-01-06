@@ -71,7 +71,7 @@ header > a {
     align-items: center;
     background: var(--darkgray);
     padding: 0 8rem;
-    box-shadow: 0 3px 8px var(--darkgray);
+    box-shadow: 0 1px 3px var(--darkgray);
 }
 
 .navLogo,
@@ -195,27 +195,66 @@ nav > ul > li > a {
     margin: 0;
 }
 
+.wave1 {
+    animation: wave ease-in-out 12s infinite;
+    -webkit-animation: wave ease-in-out 12s infinite;
+}
+.wave2 {
+    animation: wave linear 15s infinite;
+    -webkit-animation: wave ease-in-out 15s infinite;
+}
+.wave3 {
+    animation: wave linear 20s infinite;
+    -webkit-animation: wave ease-in-out 20s infinite;
+}
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}
+
 .divider1 {
-    overflow: hidden;
     position: absolute;
     z-index: 10;
     bottom: 0;
     left: 0;
-    right: 0;
     fill: #EBEBEB;
-    width: 100%;
+    width: 200%;
     height: 100px;
     transform: rotate(180deg);
 }
 
 .divider2 {
     fill: white;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
 }
 
 .ikonbanner {
     display: flex;
     justify-content: space-around;
-    padding: 3rem 8rem 6rem;
+    padding: 3rem 8rem 8rem;
 }
 
 .ikonboks {
