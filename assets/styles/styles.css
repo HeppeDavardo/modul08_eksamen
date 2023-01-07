@@ -27,6 +27,7 @@ body {
 
 h1 {
   margin: 0;
+  font-size: 3.2rem;
 }
 h2 {
     font-size: 2.4rem;
@@ -55,9 +56,11 @@ p {
   font-weight: 700;
   text-decoration: none;
 }
-
 .relative {
   position: relative;
+}
+.weight400 {
+    font-weight: 400;
 }
 
 /* Header */
@@ -117,6 +120,12 @@ nav > ul > li > a {
   font-size: 1.5rem;
 }
 
+/* kode refereret af: https://www.youtube.com/watch?v=JkuiKeNS2mg&t */
+nav > ul > li > a:is(:link, :active, :visited).active {
+    color: #E3992F;
+    font-weight: 700;
+}
+
 /* Main */
 .landingpage {
   width: 100vw;
@@ -129,6 +138,7 @@ nav > ul > li > a {
   display: flex;
   justify-content: space-between;
   z-index: -10;
+ 
 }
 
 .background_lp > img {
@@ -142,6 +152,7 @@ nav > ul > li > a {
 
 .lp_txt {
   margin-left: 12rem;
+  max-width: 25%;
   height: 100vh;
   width: 32%;
   display: flex;
@@ -456,4 +467,16 @@ position: relative;
 .aalborgKort {
     width: 80%;
     float: right;
+}
+
+/* ____________ koncept.html _____________ */
+.koncept_img {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+}
+.koncept_img > img {
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%);
 }

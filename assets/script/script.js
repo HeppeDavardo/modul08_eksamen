@@ -25,3 +25,11 @@ const landingpageObserver = new IntersectionObserver(function(entries, landingpa
 }, landingpageOptions);
 
 landingpageObserver.observe(landingpage);
+
+//Aktiv navigation refereret fra: https://www.youtube.com/watch?v=JkuiKeNS2mg&t
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a').forEach(link => {
+    if(link.href.includes(`${activePage}`)){
+        link.classList.add('active');
+    }
+});
