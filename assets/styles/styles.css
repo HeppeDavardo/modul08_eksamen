@@ -28,8 +28,12 @@ body {
 h1 {
   margin: 0;
 }
-
 h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 1rem 0 0 0;
+}
+h3 {
   font-size: 1.6rem;
   font-weight: bold;
   margin: 1rem 0 0 0;
@@ -41,6 +45,15 @@ p {
 }
 .grayBG {
   background-color: var(--gray);
+}
+.highlightedTxt {
+  color: #60724e;
+  font-weight: 700;
+}
+.textLink {
+  color: #60724e;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .relative {
@@ -271,17 +284,67 @@ nav > ul > li > a {
   background-color: var(--secondaryClr);
 }
 
+.lp_raavarer {
+position: relative;
+  display: grid;
+  grid-template-columns: 41.6% 58.4%;
+  padding: 2rem 12rem 5rem;
+  align-items: center;
+  gap: 8.3%;
+
+}
+
+.damnarkMap {
+  width: 60%;
+}
+
+/* Kode til CSS border in corners refereret fra: https://codepen.io/ThiemelJiri/pen/NaErLG */
+.infobox {
+  padding: 1em;
+  border: 2px solid var(--mainClr);
+  position: absolute;
+  top: 6rem;
+  right: 12rem;
+  width: 35%;
+}
+.infobox::before,
+.infobox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+}
+
+.infobox::before {
+  top: -0.3em;
+  bottom: -0.3em;
+  left: 1.5em;
+  right: 1.5em;
+}
+
+.infobox::after {
+  left: -0.3em;
+  right: -0.3em;
+  top: 1em;
+  bottom: 1em;
+}
+
+.infoTxt {
+  position: relative;
+  z-index: 1;
+}
+
 /* Carousel inspireret fra https://codepen.io/claudiulazar/pen/OdvVOo */
 .SoMeContainer {
-    position: relative;
-    padding-bottom: 8rem;
+  position: relative;
+  padding-bottom: 8rem;
+  padding-top: 1rem;
 }
 
 .SoMeTitle {
-    margin: 2rem 0 5rem;
-    width: 100%;
-    text-align: center;
-    font-size: 2.5rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .carouselContainer {
@@ -305,7 +368,6 @@ nav > ul > li > a {
   top: -20px;
   background-size: cover;
   display: flex;
-  
 }
 
 .carouselImg:nth-child(1) {
@@ -355,29 +417,43 @@ nav > ul > li > a {
 }
 
 .SoMeIcons {
-    margin-top: 540px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 4rem;
+  margin-top: 540px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 4rem;
 }
 .SoMeIcon {
-    width: 40px;
-    fill: var(--mainClr);
-    transition: 100ms ease-in;
-    -webkit-transition: 100ms ease-in;
-    -moz-transition: 100ms ease-in;
-    -ms-transition: 100ms ease-in;
-    -o-transition: 100ms ease-in;
+  width: 40px;
+  fill: var(--mainClr);
+  transition: 100ms ease-in;
+  -webkit-transition: 100ms ease-in;
+  -moz-transition: 100ms ease-in;
+  -ms-transition: 100ms ease-in;
+  -o-transition: 100ms ease-in;
 }
 .SoMeIcon:hover {
-    fill: var(--secondaryClr);
-    transform: scale(95%);
-    -webkit-transform: scale(95%);
-    -moz-transform: scale(95%);
-    -ms-transform: scale(95%);
-    -o-transform: scale(95%);
+  fill: var(--secondaryClr);
+  transform: scale(95%);
+  -webkit-transform: scale(95%);
+  -moz-transform: scale(95%);
+  -ms-transform: scale(95%);
+  -o-transform: scale(95%);
 }
 .Icon_awesome-instagram {
-    fill: white;
+  fill: white;
+}
+
+.findVej {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 8.3rem;
+    padding: 3rem 12rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aalborgKort {
+    width: 80%;
+    float: right;
 }
