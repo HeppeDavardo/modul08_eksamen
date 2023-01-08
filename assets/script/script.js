@@ -14,8 +14,7 @@ const landingpageObserver = new IntersectionObserver(function(entries, landingpa
         if(!entry.isIntersecting) {
             header.classList.add("fullHeader");
             navLogo.classList.add("showNavLogo");
-            ctaBookBord.classList.add("showCtaBookBord");
-            
+            ctaBookBord.classList.add("showCtaBookBord"); 
         } else {
             header.classList.remove("fullHeader");
             navLogo.classList.remove("showNavLogo");

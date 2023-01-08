@@ -8,6 +8,7 @@
 :root {
   --mainClr: #4d594d;
   --secondaryClr: #8aa08a;
+  --thirdClr: #CC9660;
   --gray: #ebebeb;
   --darkgray: #191919;
 }
@@ -65,21 +66,34 @@ p {
 
 /* Header */
 header {
-  background: transparent;
   width: 100vw;
   display: grid;
   grid-template-columns: auto auto auto;
   z-index: 50;
   position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--darkgray);
+  padding: 0 8rem;
+  box-shadow: 0 1px 3px var(--darkgray);
+}
+
+sd
+
+
+.lp_header {
+  background: transparent;
   justify-content: end;
   transition: 250ms ease-in;
   -webkit-transition: 250ms ease-in;
   -moz-transition: 250ms ease-in;
   -ms-transition: 250ms ease-in;
   -o-transition: 250ms ease-in;
+  padding: 0;
+  box-shadow: none;
 }
 
-header > a {
+.lp_header > a {
   text-decoration: none;
 }
 .fullHeader {
@@ -97,15 +111,20 @@ header > a {
 .showNavLogo,
 .showCtaBookBord {
   display: block;
+  fill: white;
 }
-
-.showNavLogo {
-  width: 150px;
+.logo {
+  display: block;
+  fill: white;
+}
+.showNavLogo,
+.logo {
+  width: 120px;
   margin: 0.5rem 0;
+  cursor: pointer;
 }
-
 nav {
-  margin-right: 8rem;
+  margin:0 8rem;
 }
 nav > ul {
   display: flex;
@@ -121,14 +140,15 @@ nav > ul > li > a {
 }
 
 /* kode refereret af: https://www.youtube.com/watch?v=JkuiKeNS2mg&t */
-nav > ul > li > a:is(:link, :active, :visited).active {
-    color: #E3992F;
+nav > ul > li > a:is(:link, :active, :visited,).active {
+    color: var(--thirdClr);
     font-weight: 700;
 }
 
 /* Main */
 .landingpage {
   width: 100vw;
+  height: inherit;
 }
 .background_lp {
   position: absolute;
@@ -150,7 +170,8 @@ nav > ul > li > a:is(:link, :active, :visited).active {
   -webkit-filter: brightness(60%);
 }
 
-.lp_txt {
+.lp_txt,
+.heroTxt {
   margin-left: 12rem;
   max-width: 25%;
   height: 100vh;
@@ -191,11 +212,16 @@ nav > ul > li > a:is(:link, :active, :visited).active {
 
 .btn1:hover,
 .btn2:hover {
+  background-color: var(--secondaryClr);
   transform: scale(97%);
   -webkit-transform: scale(97%);
   -moz-transform: scale(97%);
   -ms-transform: scale(97%);
   -o-transform: scale(97%);
+}
+.btn2:hover {
+  color: white;
+  border: 3px solid var(--secondaryClr);
 }
 
 .lp_buttons {
@@ -470,13 +496,26 @@ position: relative;
 }
 
 /* ____________ koncept.html _____________ */
-.koncept_img {
+.heroImg {
     position: absolute;
-    width: 100vw;
+    right: 0;
+    height: 100vh;
     display: flex;
     justify-content: end;
+    padding-top: 4.6rem;
+    z-index: -50;
 }
-.koncept_img > img {
-    filter: brightness(60%);
-    -webkit-filter: brightness(60%);
+.heroImg > img {
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+    height: 100%;
+    width: 50vw;
+    object-fit: cover;
+}
+.heroTxt {
+  padding-top: 4.6rem;
+}
+button > .fa-arrow-down {
+  padding-left: 8px;
+  font-size: 1rem;
 }
