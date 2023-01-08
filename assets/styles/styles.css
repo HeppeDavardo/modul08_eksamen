@@ -77,9 +77,9 @@ header {
   padding: 0 8rem;
   box-shadow: 0 1px 3px var(--darkgray);
 }
-
-sd
-
+header > a {
+  text-decoration: none;
+}
 
 .lp_header {
   background: transparent;
@@ -505,7 +505,8 @@ position: relative;
     padding-top: 4.6rem;
     z-index: -50;
 }
-.heroImg > img {
+.heroImg > img,
+.heroImg > video {
     filter: brightness(90%);
     -webkit-filter: brightness(90%);
     height: 100%;
