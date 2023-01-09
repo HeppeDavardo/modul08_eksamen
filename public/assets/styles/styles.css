@@ -95,7 +95,7 @@ header {
 .fullHeader {
   justify-content: space-between;
   align-items: center;
-  background: var(--darkgray);
+  background: var(--mainClr);
   padding: 0 8rem;
   box-shadow: 0 1px 3px var(--darkgray);
 }

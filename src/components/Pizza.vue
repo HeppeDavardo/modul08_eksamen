@@ -43,10 +43,10 @@ export default {
                 for (let i = data.length-1; i >= 0; i--) {
                     ret.innerHTML += `
                     <h1>${data[i].acf.kategori}</h1>
-                    <h2>${data[i].acf.navn1}</h2>
+                    <h3>${data[i].acf.navn1}</h3>
                     <p>${data[i].acf.ingredienser1}</p>
-                    <h2>${data[i].acf.pris1}</h2>
-                    <h2>${data[i].acf.navn2}</h2>
+                    <h3>${data[i].acf.pris1}</h3>
+                    <h3>${data[i].acf.navn2}</h3>
                     <p>${data[i].acf.ingredienser2}</p>
                     <h2>${data[i].acf.pris2}</h2>
                     <h2>${data[i].acf.navn3}</h2>
