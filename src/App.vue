@@ -73,6 +73,6 @@
   }
 
   .menuTxt {
-    
+    cursor: pointer;
   }
   </style>
