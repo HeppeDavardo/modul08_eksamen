@@ -137,12 +137,7 @@ nav > ul > li > a {
 /* kode refereret af: https://www.youtube.com/watch?v=JkuiKeNS2mg&t */
 nav > ul > li > a:is(:link, :active, :visited,).active {
     border-bottom: 2px solid white;
-    border-radius: 5px;
     font-weight: 700;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 /* Main */
