@@ -51,6 +51,9 @@ p {
 .grayBG {
   background-color: var(--gray);
 }
+.whiteBG {
+  background-color: white;
+}
 .flex{
   display: flex;
 }
@@ -428,6 +431,10 @@ position: relative;
 }
 .carouselImg:nth-child(5) {
   transform: rotateY(160deg) translateZ(430px);
+  -webkit-transform: rotateY(160deg) translateZ(430px);
+  -moz-transform: rotateY(160deg) translateZ(430px);
+  -ms-transform: rotateY(160deg) translateZ(430px);
+  -o-transform: rotateY(160deg) translateZ(430px);
 }
 .carouselImg:nth-child(6) {
   transform: rotateY(200deg) translateZ(430px);
@@ -527,10 +534,11 @@ button > .fa-arrow-down {
 }
 
 .kontaktformular {
+  position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 3rem;
-  padding: 5rem 12rem;
+  padding: 5rem 12rem 8rem;
   place-items: center;
 }
 
@@ -584,6 +592,9 @@ label {
   padding: 0 8rem;
 }
 
+.footerTxt {
+  width: 70%;
+}
 .footerTxt > h3 {
   border-bottom: 2px solid var(--secondaryClr);
 }
@@ -657,9 +668,10 @@ label {
     width: 75%;
   }
 }
-/* Landscape ipads & små laptops */
+
+/* Landscape iPads & små laptops */
 @media (max-width: 1180px) {
-  /* index.html */
+  /* header */
   header {
     padding: 0 4rem;
   }
@@ -672,6 +684,8 @@ label {
   nav > ul {
     gap: 1rem;
   }
+
+  /* index.html */
   .lp_img {
     width: 45%;
     object-fit: cover;
@@ -715,12 +729,23 @@ label {
   }
 
   .heroTxt {
+    padding-top: 0;
     margin-left: 4rem;
-    max-width: 37%;
+    max-width: 40%;
   }
   /* kontakt.html */
   .kontaktformular {
-    padding: 3rem 4rem;
+    padding: 3rem 4rem 8rem;
+  }
+
+  /* Footer */
+  .footerContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* iPad */
+@media (max-width: 820px) {
+  /* header */
+  
+}
