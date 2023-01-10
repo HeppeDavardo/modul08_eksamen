@@ -172,9 +172,8 @@ nav > ul > li > a:is(:link, :active, :visited,).active {
 .lp_txt,
 .heroTxt {
   margin-left: 8rem;
-  max-width: 25%;
+  max-width: 32%;
   height: 100vh;
-  width: 32%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -340,11 +339,11 @@ position: relative;
 
 /* Kode til CSS border in corners refereret fra: https://codepen.io/ThiemelJiri/pen/NaErLG */
 .infobox {
-  padding: 1em;
+  padding: 1rem;
   border: 2px solid var(--mainClr);
   position: absolute;
-  top: 6rem;
-  right: 12rem;
+  top: 2rem;
+  right: 8rem;
   width: 35%;
 }
 .infobox::before,
@@ -508,7 +507,7 @@ position: relative;
     object-fit: cover;
 }
 .heroTxt {
-  padding-top: 4.6rem;
+  padding-top: 2rem;
 }
 button > .fa-arrow-down {
   padding-left: 8px;
@@ -544,7 +543,7 @@ button > .fa-arrow-down {
 .formContainer {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
 }
 form > input,
 form > select,
@@ -561,13 +560,14 @@ form > textarea {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-
+label {
+  font-size: 1.5rem;
+}
 
 /* ___________ bookbord.html ____________ */
 .videoGuide > video {
-  width: 140%;
+  width: 100%;
 }
-
 
 
 /* Footer */
@@ -636,4 +636,36 @@ form > textarea {
 
 .textDec {
   color: var(--darkgray);
+}
+
+/* Laptops */
+@media (max-width: 1600px) {
+  /* index.html */
+  .infobox {
+    right: 1rem;
+    width: 45%;
+  }
+
+  /* kontakt.html */
+  .formContainer {
+    width: 75%;
+  }
+}
+/* Landscape ipads & små laptops */
+@media (max-width: 1180px) {
+  .header {
+    padding: 0 4rem;
+  }
+  .fullHeader {
+    padding: 0 4rem;
+  }
+  nav {
+    margin: 0 4rem;
+  }
+
+  .lp_img {
+    width: 45%;
+    object-fit: cover;
+    object-position: left;
+  }
 }
