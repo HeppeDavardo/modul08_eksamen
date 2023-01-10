@@ -25,10 +25,17 @@ const landingpageObserver = new IntersectionObserver(function(entries, landingpa
 
 landingpageObserver.observe(landingpage);
 
-//Aktiv navigation refereret fra: https://www.youtube.com/watch?v=JkuiKeNS2mg&t
+// Aktiv navigation refereret fra: https://www.youtube.com/watch?v=JkuiKeNS2mg&t
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('nav a').forEach(link => {
     if(link.href.includes(`${activePage}`)){
         link.classList.add('active');
     }
+});
+
+// Åben & lukke funktion af hamburger menu
+const navToggle = document.querySelector('.mobileMenuToggle');
+
+navToggle.addEventListener('click', () => {
+  document.body.classList.toggle('navMenuOpen');
 });
