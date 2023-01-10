@@ -1,4 +1,4 @@
-// Header animation
+// Header animation refereret fra: https://www.youtube.com/watch?v=RxnV9Xcw914&t
 const header = document.querySelector("header");
 const landingpage = document.querySelector(".landingpage");
 

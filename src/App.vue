@@ -13,7 +13,7 @@
         </button>
         <section class="menuImg">
           <img
-            :src="`./assets/img/menuImg/${tabs.url}`"
+            :src="`./assets/img/menuImg/${currentTab}.jpg`"
             alt=""
           />
         </section>
@@ -61,6 +61,7 @@ export default {
     return {
       currentTab: "Frokost",
       tabs: [
+        
         {
           navName: "Frokost",
           compName: "Frokost",
@@ -171,15 +172,13 @@ export default {
 }
 
 .menuImg {
-  background-color: black;
-  opacity: 50%;
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 20rem;
+  top: 25rem;
   left: 0;
   width: 100%;
-  height: 60%;
+  height: 100%;
   z-index: -10;
   pointer-events: none;
   object-fit: cover;

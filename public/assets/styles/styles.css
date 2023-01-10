@@ -319,6 +319,11 @@ margin-left: 12rem;
   width: 25%;
 }
 
+.openHours {
+  font-weight: 600;
+  margin: 0.5rem;
+}
+
 .frokostBtn {
   background-color: var(--secondaryClr);
 }
@@ -642,6 +647,7 @@ label {
 @media (max-width: 1600px) {
   /* index.html */
   .infobox {
+    top: 1rem;
     right: 1rem;
     width: 45%;
   }
@@ -653,19 +659,68 @@ label {
 }
 /* Landscape ipads & små laptops */
 @media (max-width: 1180px) {
-  .header {
+  /* index.html */
+  header {
     padding: 0 4rem;
   }
   .fullHeader {
     padding: 0 4rem;
   }
   nav {
-    margin: 0 4rem;
+    margin: 0 2rem;
   }
-
+  nav > ul {
+    gap: 1rem;
+  }
   .lp_img {
     width: 45%;
     object-fit: cover;
     object-position: left;
   }
+  .lp_txt {
+    margin-left: 8rem;
+    max-width: 40%;
+  }
+  .lp_buttons {
+    flex-wrap: wrap;
+    row-gap: 0;
+    column-gap: 2rem;
+  }
+  .btn1,
+  .btn2 {
+    margin: 1rem 0;
+  }
+  .ikonbanner {
+    justify-content: space-between;
+    padding: 3rem 4rem 8rem;
+  }
+  .lp_raavarer {
+    gap: 2rem;
+    padding: 2rem 4rem 7rem;
+  }
+  .damnarkMap {
+    width: 70%;
+  }
+  .infobox {
+    top: 0;
+    right: 0.5rem;
+    width: 50%;
+    margin-top: 0;
+  }
+  .findVej {
+    gap: 8rem;
+  }
+  .aalborgKort {
+    width: 100%;
+  }
+
+  .heroTxt {
+    margin-left: 4rem;
+    max-width: 37%;
+  }
+  /* kontakt.html */
+  .kontaktformular {
+    padding: 3rem 4rem;
+  }
 }
+
