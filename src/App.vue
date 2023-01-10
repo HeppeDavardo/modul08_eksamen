@@ -9,7 +9,7 @@
       {{ tab }}
     </button>
     <section class="menuImg">
-      <img src="../public/assets/img/sandwich.jpg" alt="">
+      <img src="" alt="">
     </section>
   </section>
     <component :is="currentTab" class="tab menuTxt"></component>
@@ -96,7 +96,7 @@ body {
   top: 20rem;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 60%;
   z-index: -10;
   pointer-events: none;
   object-fit: cover;
