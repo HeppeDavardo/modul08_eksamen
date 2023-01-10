@@ -85,6 +85,24 @@ export default {
                     </article>
                     `;
                 }
+                ret.innerHTML += `
+                    <h2 id="kategori" class="weight400 centerTxt">Prøv også vores lækre sandwiches *Kan kun bestilles som take-away.</h2>
+                    <article class="dish centerMenu">
+                        <h3 id="navn">Alm. frokostsandwich</h3>  
+                        <h3 id="pris">49,-</h3>
+                    </article>    
+                    <article class="dish centerMenu">
+                        <h3 id="navn">Stor frokostsandwich</h3>
+                        <h3 id="pris">89,-</h3>
+                    </article> 
+                    <article class="dish centerMenu">
+                        <p id="ingredienser">Vælg mellem:</p>
+                        <h3 id="pris">Spidsbryst, nakkefillet eller grillet østershatte.</h3>
+                    </article>
+                    <article class="centerBtn">
+                        <a href="./bookbord.html"><button class="btn1">Book bord</button></a>
+                    </article>
+                    `;
             });
         });
   }

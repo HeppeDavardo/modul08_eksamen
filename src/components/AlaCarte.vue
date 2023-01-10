@@ -85,6 +85,9 @@ export default {
                     </article>
                     `;
                 }
+                ret.innerHTML += `
+                <a href="./bookbord.html"><button class="btn1">Book bord</button></a>
+                `;
             });
         });
     },
