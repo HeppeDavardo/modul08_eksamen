@@ -167,13 +167,16 @@ nav > ul > li > a:is(:link, :active, :visited,).active {
 
 .lp_txt,
 .heroTxt {
-  margin-left: 12rem;
+  margin-left: 8rem;
   max-width: 25%;
   height: 100vh;
   width: 32%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.lp_txt {
+margin-left: 12rem;
 }
 
 .lp_logo {
@@ -321,7 +324,7 @@ nav > ul > li > a:is(:link, :active, :visited,).active {
 position: relative;
   display: grid;
   grid-template-columns: 41.6% 58.4%;
-  padding: 2rem 12rem 5rem;
+  padding: 2rem 8rem 5rem;
   align-items: center;
   gap: 8.3%;
 
@@ -472,7 +475,7 @@ position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 8.3rem;
-    padding: 3rem 12rem;
+    padding: 3rem 8rem;
     align-items: center;
     justify-content: space-between;
 }

@@ -1,29 +1,48 @@
 <template>
-  <section class="vueMenu">
-    <section class="menuNav">
-    <button class="menuNavBtn"
-      v-for="tab in tabs"
-      :key="tab"
-      :class="['tab-button', { active: currentTab === tab }]"
-      @click="currentTab = tab">
-      {{ tab }}
-    </button>
-    <section class="menuImg">
-      <img src="" alt="">
+  <section class="menuApp">
+    <section class="vueMenu">
+      <section class="menuNav">
+        <button
+          class="menuNavBtn"
+          v-for="tab in tabs"
+          :key="tab"
+          :class="['tab-button', { active: currentTab === tab.compName }]"
+          @click="currentTab = tab.compName"
+        >
+          {{ tab.navName }}
+        </button>
+        <section class="menuImg">
+          <img :src="src" alt="">
+        </section>
+      </section>
+      <component :is="currentTab" class="tab menuTxt"></component>
+      
     </section>
-  </section>
-    <component :is="currentTab" class="tab menuTxt"></component>
+    
+    <section class="menuDec">
+      <img
+        class="dec1"
+        src="../public/assets/img/menuImg/menuDec1.png"
+        alt=""
+      />
+      <img
+        class="dec2"
+        src="../public/assets/img/menuImg/menuDec2.png"
+        alt=""
+      />
+    </section>
   </section>
 </template>
 
 <script>
-import Frokost from './components/Frokost.vue'
-import IndenMaden from './components/IndenMaden.vue'
-import SeasonMenu from './components/SeasonMenu.vue'
-import Pizza from './components/Pizza.vue'
-import AlaCarte from './components/AlaCarte.vue'
-import Vin from './components/Vin.vue'
-import Drikkevare from './components/Drikkevare.vue'
+import Frokost from "./components/Frokost.vue";
+import IndenMaden from "./components/IndenMaden.vue";
+import SeasonMenu from "./components/SeasonMenu.vue";
+import Pizza from "./components/Pizza.vue";
+import AlaCarte from "./components/AlaCarte.vue";
+import Vin from "./components/Vin.vue";
+import Drikkevare from "./components/Drikkevare.vue";
+import MenuImg from "./components/menuImg.vue";
 
 export default {
   components: {
@@ -33,34 +52,46 @@ export default {
     Pizza,
     AlaCarte,
     Vin,
-    Drikkevare
+    Drikkevare,
+    MenuImg,
   },
   data() {
     return {
-      currentTab: 'Frokost',
-      tabs: ['Frokost', 'IndenMaden', 'SeasonMenu', 'Pizza', 'AlaCarte', 'Vin', 'Drikkevare'] 
-    }
-  }
-}
+      currentTab: "Frokost",
+      tabs: [
+        { navName: "Frokost", compName: "Frokost" },
+        { navName: "Inden maden", compName: "IndenMaden" },
+        { navName: "Sæson menu", compName: "SeasonMenu" },
+        { navName: "Pizza", compName: "Pizza" },
+        { navName: "A la carte", compName: "AlaCarte" },
+        { navName: "Vin", compName: "Vin" },
+        { navName: "Drikkevare", compName: "Drikkevare" },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
-body {
-  margin: 0;
-  padding: 0;
+.menuApp {
+  position: relative;
 }
 
 .centerMenu {
   justify-content: center;
   text-align: center;
 }
-
+.centerBtn{
+  width: 100%;
+ display: flex;
+ justify-content: center;
+}
 .vueMenu {
   font-family: "Titillium Web", sans-serif;
   display: flex;
   margin-top: 5rem;
-  padding-right: 20rem;
+  width: 80%;
   min-height: 100vh;
 }
 .menuNav {
@@ -72,24 +103,46 @@ body {
   padding-left: 20rem;
   border-right: 2px solid #707070;
 }
-.menuNavBtn{
+.menuNavBtn {
   font-family: "Titillium Web", sans-serif;
-  color: #646B41;
+  color: #646b41;
   background-color: transparent;
   border: none;
   text-align: left;
   font-size: 1.9rem;
-  font-weight: normal; 
+  font-weight: normal;
   cursor: pointer;
   width: 250px;
 }
-.menuNavBtn.active, 
+.menuNavBtn.active {
+  border-right: 4px solid #646b41;
+}
+.menuNavBtn.active,
 .menuNavBtn:hover {
-  border-right: 4px solid #646B41;
+  font-weight: 600;
+}
 
+.menuDec {
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.dec1,
+.dec2 {
+  position: absolute;
+}
+.dec1 {
+  top: 0;
+  right: 0;
+}
+.dec2 {
+  right: 0;
+  bottom: 0;
 }
 
 .menuImg {
+  background-color: black;
+  opacity: 50%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -101,13 +154,11 @@ body {
   pointer-events: none;
   object-fit: cover;
   overflow: hidden;
-  
 }
-
 
 .menuTxt {
   padding-left: 3rem;
-  color: #4D594D;
+  color: #4d594d;
 }
 .dish {
   display: flex;
@@ -117,7 +168,7 @@ body {
 }
 
 #menupunkt {
-  color: #646B41;
+  color: #646b41;
   font-size: 3.5rem;
   font-weight: 600;
   margin: 0;
@@ -125,10 +176,10 @@ body {
 .menupunktDesc {
   margin: 2rem 0 4rem;
   font-size: 1.5rem;
-  color: #646B41;
+  color: #646b41;
 }
-#kategori{
-  color: #8AA08A;
+#kategori {
+  color: #8aa08a;
   margin: 0;
   padding: 3rem 0 0.5rem;
   font-size: 1.8rem;

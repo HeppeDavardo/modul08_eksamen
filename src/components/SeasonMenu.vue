@@ -40,7 +40,7 @@ export default {
                 let ret = document.querySelector('#ret');
 
                 ret.innerHTML = `<h2 id="menupunkt">Sæsonens menu</h2>
-                                <p class="menupunktDesc">Menuen er bygget op omkring at bordet deler pizza efter eget valg.Derudover får I charcuteri, surdejsbrød, sæson bestemte retter og dessert.</p>
+                                <p class="menupunktDesc">Menuen er bygget op omkring at bordet deler pizza efter eget valg. Derudover får I charcuteri, surdejsbrød, sæson bestemte retter og dessert.</p>
                                 `;
                 for (let i = data.length-1; i >= 0; i--) {
                     ret.innerHTML += `
