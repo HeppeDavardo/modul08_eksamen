@@ -12,13 +12,15 @@
           {{ tab.navName }}
         </button>
         <section class="menuImg">
-          <img :src="src" alt="">
+          <img
+            :src="`./assets/img/menuImg/${tabs.url}`"
+            alt=""
+          />
         </section>
       </section>
       <component :is="currentTab" class="tab menuTxt"></component>
-      
     </section>
-    
+
     <section class="menuDec">
       <img
         class="dec1"
@@ -59,16 +61,44 @@ export default {
     return {
       currentTab: "Frokost",
       tabs: [
-        { navName: "Frokost", compName: "Frokost" },
-        { navName: "Inden maden", compName: "IndenMaden" },
-        { navName: "Sæson menu", compName: "SeasonMenu" },
-        { navName: "Pizza", compName: "Pizza" },
-        { navName: "A la carte", compName: "AlaCarte" },
-        { navName: "Vin", compName: "Vin" },
-        { navName: "Drikkevare", compName: "Drikkevare" },
+        {
+          navName: "Frokost",
+          compName: "Frokost",
+          url: "Frokost.jpg",
+        },
+        {
+          navName: "Inden maden",
+          compName: "IndenMaden",
+          url: "Indenmaden.jpg",
+        },
+        {
+          navName: "Sæson menu",
+          compName: "SeasonMenu",
+          url: "Saeson.jpg",
+        },
+        {
+          navName: "Pizza",
+          compName: "Pizza",
+          url: "Pizza.jpg",
+        },
+        {
+          navName: "A la carte",
+          compName: "AlaCarte",
+          url: "AlaCarte.jpg",
+        },
+        { navName: "Vin",
+          compName: "Vin",
+          url: "Vin.jpg",
+        },
+        {
+          navName: "Drikkevare",
+          compName: "Drikkevare",
+          url: "Drikkevare.jpg",
+        },
       ],
     };
   },
+  
 };
 </script>
 
@@ -82,10 +112,10 @@ export default {
   justify-content: center;
   text-align: center;
 }
-.centerBtn{
+.centerBtn {
   width: 100%;
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .vueMenu {
   font-family: "Titillium Web", sans-serif;
