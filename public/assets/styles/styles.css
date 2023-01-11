@@ -409,13 +409,6 @@ position: relative;
   perspective: 1500px;
 }
 
-.imgCarousel {
-  position: absolute;
-  width: 100%;
-  transform-style: preserve-3d;
-  animation: rotate360 60s infinite forwards linear;
-  -webkit-animation: rotate360 60s infinite forwards linear;
-}
 .carouselImg {
   position: absolute;
   width: 313px;
@@ -425,6 +418,13 @@ position: relative;
   display: flex;
 }
 
+.imgCarousel {
+  position: absolute;
+  width: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+  -webkit-animation: rotate360 60s infinite forwards linear;
+}
 .carouselImg:nth-child(1) {
   transform: rotateY(0deg) translateZ(430px);
 }
@@ -1084,6 +1084,7 @@ footer {
     padding: 2rem 2rem 0;
   }
 }
+/* Telefon */
 @media (max-width: 480px) {
   p {
     font-size: 1.2rem;
@@ -1233,7 +1234,7 @@ footer {
 
   /* koncept.html */
   .LongLandingpage {
-    height: 150vh;
+    height: 160vh;
   }
 
   /* kontakt.html */

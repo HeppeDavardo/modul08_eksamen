@@ -1,41 +1,38 @@
 <template>
   <section class="grayBG">
-  <section class="menuApp">
-    <section class="vueMenu">
-      <section class="menuNav">
-        <button
-          class="menuNavBtn"
-          v-for="tab in tabs"
-          :key="tab"
-          :class="['tab-button', { active: currentTab === tab.compName }]"
-          @click="currentTab = tab.compName"
-        >
-          {{ tab.navName }}
-        </button>
-        <section class="menuImg">
-          <img
-            :src="`./assets/img/menuImg/${currentTab}.png`"
-            alt=""
-          />
+    <section class="menuApp">
+      <section class="vueMenu">
+        <section class="menuNav">
+          <button
+            class="menuNavBtn"
+            v-for="tab in tabs"
+            :key="tab"
+            :class="['tab-button', { active: currentTab === tab.compName }]"
+            @click="currentTab = tab.compName"
+          >
+            {{ tab.navName }}
+          </button>
+          <section class="menuImg">
+            <img :src="`./assets/img/menuImg/${currentTab}.png`" alt="" />
+          </section>
         </section>
+        <component :is="currentTab" class="tab menuTxt"></component>
       </section>
-      <component :is="currentTab" class="tab menuTxt"></component>
-    </section>
 
-    <section class="menuDec">
-      <img
-        class="dec1"
-        src="../public/assets/img/menuImg/menuDec1.png"
-        alt=""
-      />
-      <img
-        class="dec2"
-        src="../public/assets/img/menuImg/menuDec2.png"
-        alt=""
-      />
+      <section class="menuDec">
+        <img
+          class="dec1"
+          src="../public/assets/img/menuImg/menuDec1.png"
+          alt=""
+        />
+        <img
+          class="dec2"
+          src="../public/assets/img/menuImg/menuDec2.png"
+          alt=""
+        />
+      </section>
     </section>
   </section>
-</section>
 </template>
 
 <script>
@@ -63,7 +60,6 @@ export default {
     return {
       currentTab: "Frokost",
       tabs: [
-        
         {
           navName: "Frokost",
           compName: "Frokost",
@@ -89,10 +85,7 @@ export default {
           compName: "AlaCarte",
           url: "AlaCarte.jpg",
         },
-        { navName: "Vin",
-          compName: "Vin",
-          url: "Vin.jpg",
-        },
+        { navName: "Vin", compName: "Vin", url: "Vin.jpg" },
         {
           navName: "Drikkevare",
           compName: "Drikkevare",
@@ -101,7 +94,6 @@ export default {
       ],
     };
   },
-  
 };
 </script>
 
