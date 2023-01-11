@@ -1,4 +1,5 @@
 <template>
+  <section class="grayBG">
   <section class="menuApp">
     <section class="vueMenu">
       <section class="menuNav">
@@ -13,7 +14,7 @@
         </button>
         <section class="menuImg">
           <img
-            :src="`./assets/img/menuImg/${currentTab}.jpg`"
+            :src="`./assets/img/menuImg/${currentTab}.png`"
             alt=""
           />
         </section>
@@ -34,6 +35,7 @@
       />
     </section>
   </section>
+</section>
 </template>
 
 <script>
@@ -105,8 +107,17 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+template {
+  background-color: #707070;
+}
+
 .menuApp {
   position: relative;
+  margin: 4rem 12rem;
+  border: 4px solid #646b41;
+  border-radius: 50px;
+  background-color: white;
+  min-height: 120vh;
 }
 
 .centerMenu {
@@ -122,17 +133,17 @@ export default {
   font-family: "Titillium Web", sans-serif;
   display: flex;
   margin-top: 5rem;
-  width: 80%;
+  width: 85%;
   min-height: 100vh;
 }
 .menuNav {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
   padding-top: 1rem;
   padding-left: 20rem;
   border-right: 2px solid #707070;
+  z-index: 5;
 }
 .menuNavBtn {
   font-family: "Titillium Web", sans-serif;
@@ -165,24 +176,30 @@ export default {
 .dec1 {
   top: 0;
   right: 0;
+  border-radius: 0 50px 0 0;
 }
 .dec2 {
   right: 0;
   bottom: 0;
+  border-radius: 0 0 50px 0;
 }
 
 .menuImg {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 25rem;
+  align-content: center;
+  top: 15rem;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -10;
+  z-index: -1;
+  overflow: hidden;
+}
+.menuImg > img {
   pointer-events: none;
   object-fit: cover;
-  overflow: hidden;
+  object-position: center;
+  width: 100%;
 }
 
 .menuTxt {

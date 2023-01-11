@@ -180,6 +180,8 @@ nav > ul > li > a:is(:link, :active, :visited,).active {
 
 .lp_txt,
 .heroTxt {
+  padding-right: 2rem;
+  background-color: white;
   margin-left: 8rem;
   max-width: 32%;
   height: 100vh;
@@ -919,6 +921,7 @@ footer {
     -webkit-filter: brightness(30%);
   }
   .lp_txt {
+    background-color: transparent;
     color: white;
     max-width: 100%;
     margin: 0 6rem;
@@ -1060,6 +1063,7 @@ footer {
     height: 40vh;
   }
   .heroTxt {
+    background-color: transparent;
     max-width: 100%;
     margin: 0 6rem;
     justify-content: flex-start;
