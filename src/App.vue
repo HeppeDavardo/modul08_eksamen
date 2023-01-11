@@ -105,7 +105,7 @@ template {
 
 .menuApp {
   position: relative;
-  margin: 4rem 12rem;
+  margin: 0 12rem;
   border: 4px solid #646b41;
   border-radius: 50px;
   background-color: white;

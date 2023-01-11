@@ -389,6 +389,18 @@ position: relative;
   z-index: 1;
 }
 
+.menukortTxt {
+  width: 800px;
+  margin: 0 auto;
+  padding: 3rem 0;
+} 
+.menukortTxt > h2 {
+  text-align: center;
+}
+.menukortTxt > p {
+  font-size: 1.2rem;
+}
+
 /* Carousel inspireret fra https://codepen.io/claudiulazar/pen/OdvVOo */
 .SoMeContainer {
   position: relative;
