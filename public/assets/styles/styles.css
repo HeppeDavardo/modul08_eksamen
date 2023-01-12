@@ -325,6 +325,8 @@ margin-left: 12rem;
   bottom: 3rem;
   z-index: 40;
   cursor: pointer;
+}
+.scrollBtn:hover {
   animation: arrowBounce 2s infinite ease-in-out;
   -webkit-animation: arrowBounce 2s infinite ease-in-out;
 }
