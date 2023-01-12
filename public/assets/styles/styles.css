@@ -320,7 +320,8 @@ margin-left: 12rem;
 
 .scrollBtn {
   position: absolute;
-  left: 12rem;
+  left: 50vw;
+  right: 50vw;
   bottom: 3rem;
   z-index: 40;
   cursor: pointer;
@@ -328,8 +329,18 @@ margin-left: 12rem;
   -webkit-animation: arrowBounce 2s infinite ease-in-out;
 }
 .scrollBtn > a > h2 {
-  font-size: 3rem;
-  color: var(--mainClr);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: var(--mainClr);
+  font-size: 2rem;
+  color: white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 @keyframes arrowBounce {
