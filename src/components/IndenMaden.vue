@@ -85,6 +85,13 @@ export default {
                     </article>
                     `;
                 }
+                ret.innerHTML += `
+                    <p id="kategori" class="centerTxt">Start også aftenen med vores udsøgte cocktails eller et glas vin!</p>
+                    <article class="centerBtn">
+                        <a href="./bookbord.html"><button class="btn1">Book bord</button></a>
+                        <a href="./takeaway.html"><button class="btn2">Take Away</button></a>
+                    </article>
+                    `;
             });
         });
   }

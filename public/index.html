@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Forside | Fumo</title>
     <script src="https://kit.fontawesome.com/21b8c89919.js" crossorigin="anonymous"></script>
+    
+    <!-- favIcons -->
+    <link rel="icon" type="image/png" href="./assets/img/fav-icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./assets/img/fav-icons/favicon-16x16.png" sizes="16x16" />    
+
+    <!-- Open graph SEO -->
+    <meta property="og:title" content=Restaurant Fumo | Moderne pizzeria>
+    <meta property="og:site_name" content=fumoaalborg>
+    <meta property="og:url" content=fumoaalborg.dk>
+    <meta property="og:description" content=Hos restaurant Fumo går vi ikke på kompromis med kvaliteten af vores råvarer når vi tilbereder innovative og udsøgte måltider. Du kan forvente at sæsonen afspejles i vores menukort, da vi mener at maden bliver bedst med friske og lokale råvare!>
+    <meta property="og:type" content=restaurant>
+    <meta property="og:image" content=https://unsplash.com/photos/hfwJaTMlMkY>
+    
+    <!-- JSON-LD-markering genereret af Google Opmærkningsværktøj til strukturerede data. -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Restaurant",
+        "name": "Fumo",
+        "image": "http://www.googleusercontent.com/assets/img/landingpage.png",
+        "telephone": "77 41 90 00",
+        "email": "",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Godsbanen 20",
+          "addressLocality": "Aalborg",
+          "postalCode": "9000"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": {
+            "@type": "DayOfWeek",
+            "name": "alle ugens dage."
+          },
+          "opens": "Indsæt en gyldig dato og tid i ISO 8601-datoformat her. Eksempler: 2015-07-27 eller 2015-07-27T15:30",
+          "closes": "Indsæt en gyldig dato og tid i ISO 8601-datoformat her. Eksempler: 2015-07-27 eller 2015-07-27T15:30"
+        }
+      }
+      </script>
   </head>
 
   <body>
@@ -109,7 +148,7 @@
     <main>
       <section class="landingpage">
         <article class="background_lp">
-          <img class="mbHidden" src="./assets/img/landingpage_stripe.png" alt="" />
+          <img class="mbHidden" src="./assets/img/landingpage_stripe.jpg" alt="landingpage_stripe" />
           <img
             class="lp_img"
             src="./assets/img/landingpage.png"
@@ -195,7 +234,7 @@
           <h1 class="lp_title">Et moderne pizzeria</h1>
           <p>
             Hos restaurant Fumo går vi ikke på kompromis med <span class="highlightedTxt lp_fancyTxt">kvaliteten</span> af vores
-            råvare når vi tilbereder innovative og udsøgte måltider. Du kan
+            råvarer når vi tilbereder innovative og udsøgte måltider. Du kan
             forvente at <span class="highlightedTxt lp_fancyTxt">sæsonen</span> afspejles i vores menukort, da vi mener at maden
             bliver bedst med <span class="highlightedTxt lp_fancyTxt">friske</span> og <span class="highlightedTxt lp_fancyTxt">lokale</span> råvare!
           </p>
@@ -227,11 +266,14 @@
             d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"
           />
         </svg>
+        <section class="scrollBtn">
+          <a href="#anchor"><h2><i class="fa-solid fa-angles-down"></i></h2></a>
+        </section>
       </section>
-      <section class="relative">
+      <section id="anchor" class="relative">
         <section class="ikonbanner grayBG">
           <article class="ikonboks">
-            <img src="./assets/img/frokost_icon.svg" alt="" />
+            <img src="./assets/img/frokost_icon.svg" alt="frokost ikon" />
             <h3>Frokost</h3>
             <p>
               Nyd en af vores lækre sandwiches eller en pizza til frokost enten
@@ -241,7 +283,7 @@
             <a href="#menukort"><button class="btn1 frokostBtn">Frokost menu</button></a>
           </article>
           <article class="ikonboks">
-            <img src="./assets/img/aften_icon.svg" alt="" />
+            <img src="./assets/img/aften_icon.svg" alt="aften ikon" />
             <h3>Aften</h3>
             <p>
               Skal du forkæle dig selv og nogle du kender med lækkert mad i
@@ -282,7 +324,7 @@
           <p>Du kan læse mere om <a class="textLink" href="./koncept.html"><span>vores koncept her <i class="fa-solid fa-arrow-right"></i></span></a></p>
         </article>
         <article class="relative">
-          <img class="damnarkMap" src="assets/img/kort_danmark.svg" alt="">
+          <img class="damnarkMap" src="assets/img/kort_danmark.svg" alt="kort over danmark">
           <p class="infobox">
             <span class="infoTxt">Vidste du, at vores pizzabunde er lavet med mel fra en lokal producent på Samsø og er bestående af surdej, som skaber den perfekte sprøde skorpe på alle vores pizzaer.<br><a class="textLink" href="#menukort"><span>Se vores udvalg af pizzaer <i class="fa-solid fa-arrow-right"></i></span></a></span>
           </p>
@@ -316,8 +358,24 @@
           <p>Vælg mellem de bedste pizzaer, a la carte eller vores sæsonbestemte menu med flere serveringer.</p>
         </article>
         <section id="app"></section>
+        <svg class="divider1 Icon_awesome-instagram" preserveAspectRatio="none" viewBox="0 0 1200 120">
+          <path
+            class="wave1"
+            d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+            opacity=".25"
+          />
+          <path
+            class="wave2"
+            d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+            opacity=".5"
+          />
+          <path
+            class="wave3"
+            d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"
+          />
+        </svg>
       </section>
-      <section class="SoMeContainer grayBG">
+      <section class="SoMeContainer">
         <h2 class="SoMeTitle">Følg os på sociale medier</h2>
         <section class="carouselContainer">
           <section class="imgCarousel">
@@ -361,7 +419,7 @@
           </a>
         </section>
         <svg
-          class="divider1 divider2"
+          class="divider1 divider2 fillGray"
           preserveAspectRatio="none"
           viewBox="0 0 1440 160"
         >
@@ -381,7 +439,7 @@
           ></path>
         </svg>
       </section>
-      <section class="findVej">
+      <section class="findVej grayBG relative">
         <article>
           <h2>Du finder os i hjertet af Aalborg</h2>
           <p>Du kan finde os på adressen Godsbanen 20, 9000 Aalborg. Hvor man kan blive sat af lige ved døren eller parkere i nærheden.</p>
@@ -389,11 +447,27 @@
         </article>
         <article> 
           <!-- Der skal en vektor rundt om den her -->
-          <img class="aalborgKort" src="./assets/img/Aalborg_kort.jpg" alt="">
+          <img class="aalborgKort" src="./assets/img/Aalborg_kort.jpg" alt="kort over Aalborg">
         </article>
+        <svg class="divider1 Icon_awesome-instagram" preserveAspectRatio="none" viewBox="0 0 1200 120">
+          <path
+            class="wave1"
+            d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+            opacity=".25"
+          />
+          <path
+            class="wave2"
+            d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+            opacity=".5"
+          />
+          <path
+            class="wave3"
+            d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"
+          />
+        </svg>
       </section>
     </main>
-    <footer class="grayBG">
+    <footer>
       <section class="footerContainer">
         <article class="footerTxt">
           <h3 class="weight400">Find vej</h3>

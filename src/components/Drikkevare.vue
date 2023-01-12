@@ -12,34 +12,39 @@ export default {
   },
   created() {
     let token;
-        // fetching private posts from category frokost
+         // fetcher vores token
         fetch('https://helenamarias.com/wp-json/jwt-auth/v1/token',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
+            // login informationer til admin brugeren
             body: JSON.stringify({
                  "username": "projektadmin",
                 "password": "helenajeppeadmin"
             })
         })
+        // Laver dataen om til JSON format
         .then(response => response.json())
+        // Sætter dataen sammen med vores token så vi kan tilgå den
         .then(data => { 
             token = data.data.token;
         })
+        // fetcher vores posts fra WordPress
         .then(() => {
             fetch('https://helenamarias.com/wp-json/wp/v2/posts?status=private&categories=34',{
                 method: 'GET',
                 headers: {
-                    Authorization: `Bearer ${token}`
+                    Authorization: `Bearer ${token}` // tilføjer vores token til headers, så vi kan tilgå vores posts
                 }
             })
             .then(response => response.json())
             .then(data => { 
                 console.log(data);
-                let ret = document.querySelector('#ret');
+                let ret = document.querySelector('#ret'); // fanger vores div oppe i html
 
-                ret.innerHTML = `<h2 id="menupunkt">Drikkevare</h2>`;
+                ret.innerHTML = `<h2 id="menupunkt">Drikkevare</h2>`; //overskrift på menu
+                // Looper igennem alle posts og skriver dem ind i html dokumentet
                 for (let i = data.length-1; i >= 0; i--) {
                     ret.innerHTML += `
                     <h2 id="kategori">${data[i].acf.kategori}</h2>
@@ -85,6 +90,12 @@ export default {
                     </article>
                     `;
                 }
+                ret.innerHTML += `
+                    <article class="centerBtn">
+                        <a href="./bookbord.html"><button class="btn1">Book bord</button></a>
+                        <a href="./takeaway.html"><button class="btn2">Take Away</button></a>
+                    </article>
+                    `;
             });
         });
   }

@@ -101,6 +101,7 @@ export default {
                     </article>
                     <article class="centerBtn">
                         <a href="./bookbord.html"><button class="btn1">Book bord</button></a>
+                        <a href="./takeaway.html"><button class="btn2">Take Away</button></a>
                     </article>
                     `;
             });

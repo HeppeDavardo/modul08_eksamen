@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Kontakt | Fumo</title>
     <script src="https://kit.fontawesome.com/21b8c89919.js" crossorigin="anonymous"></script>
+    
+    <!-- favIcons -->
+    <link rel="icon" type="image/png" href="./assets/img/fav-icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./assets/img/fav-icons/favicon-16x16.png" sizes="16x16" />
+
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content=Restaurant Fumo | Kontakt>
+    <meta property="og:site_name" content=fumoaalborg>
+    <meta property="og:url" content=fumoaalborg.dk/kontakt>
+    <meta property="og:description" content=Hvis du ønsker at booke bord kan det gøres online eller du kan ringe til os på nedenstående nummer. Vi glæder os til at høre fra dig!>
+    <meta property="og:type" content=restaurant>
+    <meta property="og:image" content=https://unsplash.com/photos/4Hv6CF1NCjY>
 </head>
 
 <body>
@@ -189,7 +201,7 @@
     <main>
         <section class="landingpage">
             <article class="heroImg">
-                <img src="./assets/img/fumo-kontakt.jpg" alt="">
+                <img src="./assets/img/fumo-kontakt.jpg" alt="kontakt herobillede">
             </article>
             <article class="heroTxt">
                 <h1>Kontakt os</h1>
@@ -214,10 +226,13 @@
                 <path class="wave3"
                     d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
             </svg>
+            <section class="scrollBtn">
+              <a href="#anchor"><h2><i class="fa-solid fa-angles-down"></i></h2></a>
+            </section>
         </section>
-        <section class="kontaktformular grayBG">
+        <section id="anchor" class="kontaktformular grayBG">
             <article class="formImg mbHidden">
-                <img src="./assets/img/fumo-kontaktformular.jpg" alt="">
+                <img src="./assets/img/fumo-kontaktformular.jpg" alt="fumo pizzabox med ild i">
             </article>
             <article class="formContainer">
                 <h2 class="centerTxt">Kontaktformular</h2>
@@ -257,8 +272,35 @@
           ></path>
         </svg>
         </section>
+        <section class="findVej relative">
+          <article>
+            <h2>Du finder os i hjertet af Aalborg</h2>
+            <p>Du kan finde os på adressen Godsbanen 20, 9000 Aalborg. Hvor man kan blive sat af lige ved døren eller parkere i nærheden.</p>
+            <a target="_blank" href="https://www.google.dk/maps/dir//Fumo,+Godsbanen+20,+9000+Aalborg/@57.0419866,9.9200757,17z/data=!4m16!1m6!3m5!1s0x46493351df496c8d:0x40f00714423cc82d!2sFumo!8m2!3d57.0419837!4d9.9222644!4m8!1m0!1m5!1m1!1s0x46493351df496c8d:0x40f00714423cc82d!2m2!1d9.9222644!2d57.0419837!3e2?hl=da&authuser=0"><button class="btn1">Kørselsvejledning</button></a>
+          </article>
+          <article> 
+            <!-- Der skal en vektor rundt om den her -->
+            <img class="aalborgKort" src="./assets/img/Aalborg_kort.jpg" alt="kort over Aalborg">
+          </article>
+          <svg class="divider1" preserveAspectRatio="none" viewBox="0 0 1200 120">
+            <path
+              class="wave1"
+              d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+              opacity=".25"
+            />
+            <path
+              class="wave2"
+              d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+              opacity=".5"
+            />
+            <path
+              class="wave3"
+              d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"
+            />
+          </svg>
+        </section>
     </main>
-    <footer class="whiteBG">
+    <footer class="grayBG">
         <section class="footerContainer">
           <article class="footerTxt">
             <h3 class="weight400">Find vej</h3>

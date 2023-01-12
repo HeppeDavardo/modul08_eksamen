@@ -47,12 +47,16 @@ h3 {
 p {
   font-weight: 300;
   margin-bottom: 0;
+  font-size: 1.2rem;
 }
 .grayBG {
   background-color: var(--gray);
 }
 .whiteBG {
   background-color: white;
+}
+.fillWhite {
+  fill: white;
 }
 .flex{
   display: flex;
@@ -207,7 +211,6 @@ margin-left: 12rem;
   font-size: 1.2rem;
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
-  padding: 0.3rem 2rem;
   cursor: pointer;
   margin: 2rem 0;
   transition: 0.1s ease-in;
@@ -242,14 +245,17 @@ margin-left: 12rem;
 }
 
 .btn1 {
+  padding: 0.3rem 2rem;
   color: white;
   background-color: var(--mainClr);
   border: none;
 }
 .btn2 {
+  padding: 0.2rem 1.9rem;
   color: var(--mainClr);
   background-color: transparent;
   border: 3px solid var(--mainClr);
+  
 }
 .showCtaBookBord {
   margin: 0;
@@ -312,6 +318,68 @@ margin-left: 12rem;
   -o-transform: scaleX(-1);
 }
 
+.scrollBtn {
+  position: absolute;
+  left: 12rem;
+  bottom: 3rem;
+  z-index: 40;
+  cursor: pointer;
+  animation: arrowBounce 2s infinite ease-in-out;
+  -webkit-animation: arrowBounce 2s infinite ease-in-out;
+}
+.scrollBtn > a > h2 {
+  font-size: 3rem;
+  color: var(--mainClr);
+}
+
+@keyframes arrowBounce {
+  0%{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+  20%{
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+  40% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+}
+  60% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+  80% {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+}
+
+.fillGray {
+  fill: var(--gray);
+}
 .ikonbanner {
   display: flex;
   justify-content: space-around;
@@ -387,6 +455,11 @@ position: relative;
 .infoTxt {
   position: relative;
   z-index: 1;
+}
+
+.menukort {
+  padding: 0 0 12rem;
+  position: relative;
 }
 
 .menukortTxt {
@@ -510,7 +583,7 @@ position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 8.3rem;
-    padding: 3rem 8rem;
+    padding: 3rem 8rem 8rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -697,7 +770,7 @@ footer {
   display: none;
 }
 /* Landscape iPads & små laptops */
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   /* header */
   header {
     padding: 0 4rem;
@@ -720,7 +793,7 @@ footer {
   }
   .lp_txt {
     margin-left: 8rem;
-    max-width: 40%;
+    max-width: 43%;
   }
   .lp_buttons {
     flex-wrap: wrap;
@@ -734,6 +807,10 @@ footer {
   .ikonbanner {
     justify-content: space-between;
     padding: 3rem 4rem 8rem;
+    gap: 2rem;
+  }
+  .ikonboks {
+   width: 450px;
   }
   .lp_raavarer {
     gap: 2rem;
@@ -755,11 +832,27 @@ footer {
     width: 100%;
   }
 
+  .menukortTxt {
+    width: 700px;
+  }
+
   .heroTxt {
-    padding-top: 0;
+    padding-top: 10rem;
     margin-left: 4rem;
     max-width: 40%;
   }
+
+  .divider1 {
+    height: 70px;
+  }
+  /* koncept.html */
+  .ipadHidden {
+    display: none;
+  }
+  .LongLandingpage {
+    height: 120vh;
+  }
+
   /* kontakt.html */
   .kontaktformular {
     padding: 3rem 4rem 8rem;
@@ -978,6 +1071,10 @@ footer {
     gap: 5rem;
   }
 
+  .menukortTxt > p {
+    font-size: 1.3rem;
+  }
+
   .SoMeContainer {
     padding-bottom: 8rem;
   }
@@ -1082,10 +1179,6 @@ footer {
     padding-top: 45vh;
   }
 
-  /* koncept.html */
-  .LongLandingpage {
-    height: 135vh;
-  }
 
   /* kontakt.html */
   .kontaktformular {
@@ -1123,6 +1216,7 @@ footer {
 /* index.html */
   .lp_txt {
     margin: 0 1rem;
+    padding-right: 0;
   }
   .lp_logo{
     width: 60%;
@@ -1150,6 +1244,11 @@ footer {
   }
   .damnarkMap {
     width: 100%;
+  }
+
+  .menukortTxt {
+    width: 100%;
+    padding: 3rem 1rem;
   }
 
   .SoMeTitle {
@@ -1242,11 +1341,16 @@ footer {
   .heroTxt {
     margin: 0 1rem;
     padding-top: 32vh;
+    padding-right: 0;
   }
 
   /* koncept.html */
   .LongLandingpage {
-    height: 160vh;
+    height: 140vh;
+  }
+  .heroImg > img,
+  .heroImg > video{
+    height: auto;
   }
 
   /* kontakt.html */
